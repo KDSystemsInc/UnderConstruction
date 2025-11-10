@@ -23,13 +23,19 @@
 
     /* LOGO ANIMATION */
     img {
-      width: 180px;
-      max-width: 60vw;
+      width: 50vw;                /* 50% of screen width on desktop */
+      max-width: 700px;           /* prevent it from getting too big on large screens */
       opacity: 0;
       transform: scale(0.8);
       animation: fadeInScale 1.6s ease-out forwards;
     }
-    @keyframes fadeInScale { to { opacity: 1; transform: scale(1); } }
+
+    @keyframes fadeInScale {
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
 
     /* TAGLINE */
     h1 {
@@ -45,7 +51,12 @@
       animation-delay: 1.8s;
       position: relative;
     }
-    @keyframes fadeInText { to { opacity: 1; } }
+
+    @keyframes fadeInText {
+      to {
+        opacity: 1;
+      }
+    }
 
     /* UNDERLINE ANIMATION — blue→red→blue→red, then solid red */
     h1::after {
@@ -68,6 +79,7 @@
       0%,100% { opacity: 0.25; transform: scaleX(0.85); background: linear-gradient(90deg, transparent, #009dff, transparent); }
       50%     { opacity: 1;    transform: scaleX(1);   background: linear-gradient(90deg, transparent, #009dff, transparent); }
     }
+
     @keyframes pulse-red {
       0%,100% { opacity: 0.25; transform: scaleX(0.85); background: linear-gradient(90deg, transparent, #ff3b30, transparent); }
       50%     { opacity: 1;    transform: scaleX(1);   background: linear-gradient(90deg, transparent, #ff3b30, transparent); }
@@ -96,13 +108,17 @@
       text-decoration: none;
       transition: color 0.3s;
     }
+
     a:hover { color: #cfe9ff; }
 
     /* RESPONSIVE */
     @media (max-width: 600px) {
+      img {
+        width: 80vw;             /* 80% of screen width on mobile */
+        max-width: none;
+      }
       h1 { font-size: 1.3rem; }
       .contact { font-size: 0.85rem; }
-      img { width: 140px; }
     }
   </style>
 </head>
