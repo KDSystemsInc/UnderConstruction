@@ -31,6 +31,55 @@
   <meta name="twitter:description" content="Over 33 years of enterprise IT solutions. New site coming soon." />
   <meta name="twitter:image" content="https://kdsystemsinc.com/Logo.jpeg" />
 
+  <!-- Schema.org LocalBusiness -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://kdsystemsinc.com",
+    "name": "KD Systems, Inc.",
+    "description": "Enterprise IT solutions provider specializing in networking, cybersecurity, cloud services, VoIP & telecom, and managed IT support.",
+    "url": "https://kdsystemsinc.com",
+    "logo": "https://kdsystemsinc.com/Logo.jpeg",
+    "image": "https://kdsystemsinc.com/Logo.jpeg",
+    "telephone": "+1-203-487-6300",
+    "email": "Info@KDSystemsInc.com",
+    "foundingDate": "1991",
+    "slogan": "Trusted Technology Partners",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "500 W Putnam Ave, Suite 400",
+      "addressLocality": "Greenwich",
+      "addressRegion": "CT",
+      "postalCode": "06830",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 41.0382,
+      "longitude": -73.6437
+    },
+    "areaServed": {
+      "@type": "GeoCircle",
+      "geoMidpoint": {
+        "@type": "GeoCoordinates",
+        "latitude": 41.0382,
+        "longitude": -73.6437
+      },
+      "geoRadius": "80000"
+    },
+    "knowsAbout": [
+      "Network Infrastructure",
+      "Cybersecurity",
+      "Cloud Computing",
+      "VoIP & Telecommunications",
+      "Managed IT Services",
+      "IT Support"
+    ],
+    "sameAs": []
+  }
+  </script>
+
   <style>
     /* ── RESET ── */
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
@@ -170,8 +219,9 @@
     }
 
     .services-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
       gap: 1.5rem;
       max-width: 900px;
       margin: 0 auto;
@@ -182,6 +232,7 @@
       border-radius: 14px;
       padding: 2rem 1.2rem;
       text-align: center;
+      width: 160px;
       box-shadow: 0 1px 3px rgba(10, 22, 40, 0.06);
       transition: transform 0.25s ease, box-shadow 0.25s ease;
     }
@@ -283,13 +334,13 @@
         min-height: 40vh;
       }
       .hero-logo { width: 75vw; }
-      .services-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
-      .service-card { padding: 1.4rem 0.8rem; }
+      .services-grid { gap: 1rem; }
+      .service-card { width: 140px; padding: 1.4rem 0.8rem; }
       .contact-items { flex-direction: column; align-items: center; gap: 1.2rem; }
     }
 
     @media (max-width: 360px) {
-      .services-grid { grid-template-columns: 1fr; }
+      .service-card { width: 100%; }
     }
   </style>
 </head>
